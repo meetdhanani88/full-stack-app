@@ -19,7 +19,7 @@ const Dashboard = () => {
 
     // const fetchProtectedData = async () => {
     //   try {
-    //     const response = await fetch('http://localhost:3000/api/protected', {
+    //     const response = await fetch('https://full-stack-app-rho.vercel.app/api/protected', {
     //       credentials: 'include',
     //     });
     //     const data = await response.json();

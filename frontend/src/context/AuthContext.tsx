@@ -16,7 +16,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/protected', {
+        const response = await fetch('https://full-stack-app-rho.vercel.app/api/protected', {
           credentials: 'include',
           headers: {
             'Accept': 'application/json',
@@ -39,7 +39,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logout = async () => {
     try {
-      await fetch('http://localhost:3000/api/auth/logout', {
+      await fetch('https://full-stack-app-rho.vercel.app/api/auth/logout', {
         method: 'POST',
         credentials: 'include',
         headers: {
