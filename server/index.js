@@ -26,7 +26,6 @@ app.use(cors({
 // Middleware
 app.use(cookieParser());
 app.use(express.json());
-app.use('/', (req,res)=> res.json({message:"hello thre"}));
 // Routes
 app.use('/api/auth', authRoutes);
 
