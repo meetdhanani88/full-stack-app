@@ -51,9 +51,8 @@ router.post('/login', async (req, res) => {
     );
 
     res.cookie('token', token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax', // Changed to 'lax' for better browser compatibility
+      secure: "auto",
+      sameSite: 'none', // Changed to 'lax' for better browser compatibility
       maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days in milliseconds
     });
 
