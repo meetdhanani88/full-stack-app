@@ -14,14 +14,16 @@ connectDB();
 const app = express();
 
 // CORS configuration with more detailed options
+
 app.use(cors({
-  origin: true, // Allow all origins in development
-  credentials: true, // Allow credentials
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
+  origin: 'https://full-stack-app-93mu.vercel.app', // Allow only this frontend URL
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'], // Allowed headers
-  exposedHeaders: ['Set-Cookie'], // Expose these headers
+  exposedHeaders: ['Set-Cookie'], // Headers exposed to the frontend
   maxAge: 600 // Cache preflight requests for 10 minutes
 }));
+
 
 // Middleware
 app.use(cookieParser());
